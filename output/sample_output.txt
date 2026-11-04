@@ -1,0 +1,200 @@
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 1
+
+--- All Technology Services ---
+--------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+--------------------------------------------------------------------------------
+SRV-101    | Custom Web App Development     | Software Developme   | 2400.00    | Active    
+SRV-102    | Cross-Platform Mobile Apps     | Mobile Development   | 3100.00    | Active    
+SRV-103    | Cloud Architecture & Migrati   | Cloud Solutions      | 4200.00    | Active    
+SRV-104    | UI/UX Product Design           | Design Services      | 1300.00    | Active    
+SRV-105    | DevOps & CI/CD Pipeline Setu   | Infrastructure       | 2200.00    | Inactive  
+SRV-106    | Cyber Security Audit           | Security             | 2800.00    | Active    
+SRV-107    | Data Analytics & Reporting     | Data Services        | 1900.00    | Active    
+SRV-108    | Enterprise ERP Implementatio   | Enterprise Solutio   | 6500.00    | Inactive  
+SRV-109    | REST API Development           | Software Developme   | 1600.00    | Active    
+SRV-110    | AI Virtual Assistant Setup     | Emerging Tech        | 2300.00    | Active    
+--------------------------------------------------------------------------------
+Total: 10 record(s)
+
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 2
+
+--- Add New Technology Service ---
+Enter Service ID (e.g. SRV-111): SRV-111
+Enter Service Name: AI Automation & Workflow Setup
+Enter Category: Emerging Tech
+Enter Price ($): 1850.00
+Enter Duration (e.g. 4 weeks): 3 weeks
+Enter Status (Active/Inactive) [Default: Active]: Active
+
+Success: Service 'SRV-111 - AI Automation & Workflow Setup' has been added.
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 3
+
+--- Search Services ---
+Enter search term (name or category): Cloud
+
+Found 1 matching service(s) for 'Cloud':
+--------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+--------------------------------------------------------------------------------
+SRV-103    | Cloud Architecture & Migrati   | Cloud Solutions      | 4200.00    | Active    
+--------------------------------------------------------------------------------
+Total: 1 record(s)
+
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 4
+
+--- Filter Services by Status ---
+Enter status to filter (Active/Inactive): Inactive
+
+Showing 2 service(s) with status 'Inactive':
+--------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+--------------------------------------------------------------------------------
+SRV-105    | DevOps & CI/CD Pipeline Setu   | Infrastructure       | 2200.00    | Inactive  
+SRV-108    | Enterprise ERP Implementatio   | Enterprise Solutio   | 6500.00    | Inactive  
+--------------------------------------------------------------------------------
+Total: 2 record(s)
+
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 5
+
+--- Update Service Status ---
+Enter Service ID to update: SRV-105
+Enter New Status (Active/Inactive): Active
+
+Success: Service 'SRV-105' status updated to 'Active'.
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 2
+
+--- Add New Technology Service ---
+Enter Service ID (e.g. SRV-111): SRV-112
+Enter Service Name: Cloud Security Review
+Enter Category: Security
+Enter Price ($): -450
+Enter Duration (e.g. 4 weeks): 2 weeks
+Enter Status (Active/Inactive) [Default: Active]: Active
+
+Validation Error: Price must be greater than zero.
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 5
+
+--- Update Service Status ---
+Enter Service ID to update: SRV-999
+Enter New Status (Active/Inactive): Active
+
+Not Found Error: Service with ID 'SRV-999' does not exist.
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 6
+
+--- Delete Service ---
+Enter Service ID to delete: SRV-888
+Are you sure you want to delete service 'SRV-888'? (y/n): y
+
+Not Found Error: Service with ID 'SRV-888' does not exist.
+==================================================
+ Veda Technology - Business & Service Management
+ Day 1: Foundation & Service Management
+==================================================
+1. View All Services
+2. Add New Service
+3. Search Services (by Name or Category)
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Exit
+==================================================
+Enter your choice (1-7): 7
+
+Thank you for using Veda Technology Service Management System. Goodbye!

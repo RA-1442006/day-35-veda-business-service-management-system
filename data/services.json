@@ -1,0 +1,90 @@
+[
+  {
+    "service_id": "SRV-101",
+    "name": "Custom Web App Development",
+    "category": "Software Development",
+    "price": 2400.0,
+    "duration": "6 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-102",
+    "name": "Cross-Platform Mobile Apps",
+    "category": "Mobile Development",
+    "price": 3100.0,
+    "duration": "8 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-103",
+    "name": "Cloud Architecture & Migration",
+    "category": "Cloud Solutions",
+    "price": 4200.0,
+    "duration": "5 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-104",
+    "name": "UI/UX Product Design",
+    "category": "Design Services",
+    "price": 1300.0,
+    "duration": "3 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-105",
+    "name": "DevOps & CI/CD Pipeline Setup",
+    "category": "Infrastructure",
+    "price": 2200.0,
+    "duration": "4 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-106",
+    "name": "Cyber Security Audit",
+    "category": "Security",
+    "price": 2800.0,
+    "duration": "2 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-107",
+    "name": "Data Analytics & Reporting",
+    "category": "Data Services",
+    "price": 1900.0,
+    "duration": "4 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-108",
+    "name": "Enterprise ERP Implementation",
+    "category": "Enterprise Solutions",
+    "price": 6500.0,
+    "duration": "12 weeks",
+    "status": "Inactive"
+  },
+  {
+    "service_id": "SRV-109",
+    "name": "REST API Development",
+    "category": "Software Development",
+    "price": 1600.0,
+    "duration": "3 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-110",
+    "name": "AI Virtual Assistant Setup",
+    "category": "Emerging Tech",
+    "price": 2300.0,
+    "duration": "4 weeks",
+    "status": "Active"
+  },
+  {
+    "service_id": "SRV-111",
+    "name": "AI Automation & Workflow Setup",
+    "category": "Emerging Tech",
+    "price": 1850.0,
+    "duration": "3 weeks",
+    "status": "Active"
+  }
+]

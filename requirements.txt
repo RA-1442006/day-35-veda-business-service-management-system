@@ -1,0 +1,2 @@
+# Day 1 uses Python standard library only (json, os, sys)
+# Additional third-party dependencies will be added in subsequent days if needed.
