@@ -1,0 +1,397 @@
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 2: Programs, Inquiries, Search & Reports
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 2
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 1
+
+--- All Technology & Training Programs ---
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-201    | Full Stack Python Internship       | Internship     | 12 weeks   | 30     | Open      
+PRG-202    | Cloud DevOps Engineering Bootcam   | Training       | 8 weeks    | 25     | Open      
+PRG-203    | Cyber Security Analyst Internshi   | Internship     | 10 weeks   | 20     | Open      
+PRG-204    | AI & Machine Learning Foundation   | Technology     | 6 weeks    | 35     | Ongoing   
+PRG-205    | Data Engineering & Analytics Tra   | Training       | 8 weeks    | 25     | Open      
+PRG-206    | Mobile App Development Internshi   | Internship     | 12 weeks   | 20     | Closed    
+PRG-207    | Enterprise Java Microservices      | Technology     | 8 weeks    | 30     | Ongoing   
+PRG-208    | UI/UX Product Design Bootcamp      | Training       | 4 weeks    | 20     | Open      
+PRG-209    | Blockchain Architecture Program    | Technology     | 6 weeks    | 15     | Closed    
+PRG-210    | React & Frontend Mastery Interns   | Internship     | 10 weeks   | 25     | Open      
+--------------------------------------------------------------------------------------------
+Total: 10 record(s)
+
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 2
+
+--- Add New Program ---
+Enter Program ID (e.g. PRG-211): PRG-211
+Enter Program Title: Data Science & GenAI Apprenticeship
+Enter Type (Technology/Training/Internship): Internship
+Enter Duration (e.g. 8 weeks): 16 weeks
+Enter Available Seats (e.g. 25): 20
+Enter Status (Open/Ongoing/Closed) [Default: Open]: Open
+
+Success: Program 'PRG-211 - Data Science & GenAI Apprenticeship' added.
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 2
+
+--- Add New Program ---
+Enter Program ID (e.g. PRG-211): PRG-212
+Enter Program Title: Quantum Computing Foundations
+Enter Type (Technology/Training/Internship): Technology
+Enter Duration (e.g. 8 weeks): 4 weeks
+Enter Available Seats (e.g. 25): -5
+Enter Status (Open/Ongoing/Closed) [Default: Open]: Open
+
+Validation Error: Seats must be greater than zero.
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 7
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 2: Programs, Inquiries, Search & Reports
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 3
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 1
+
+--- All Customer Inquiries ---
+=========================================================================================================
+ID         | Customer           | Linked             | Subject                        | Date       | Status      
+---------------------------------------------------------------------------------------------------------
+INQ-501    | Rajesh Sharma      | Service SRV-101    | Web Portal Modernization       | 2026-11-01 | New         
+INQ-502    | Priya Nair         | Service SRV-103    | AWS Cloud Migration            | 2026-11-02 | In Progress 
+INQ-503    | Vikram Mehta       | Program PRG-201    | Full Stack Internship Placem   | 2026-11-02 | Resolved    
+INQ-504    | Sneha Rao          | Program PRG-202    | DevOps Training Schedule       | 2026-11-03 | New         
+INQ-505    | Arun Kumar         | Service SRV-106    | Annual Cyber Security Audit    | 2026-11-03 | In Progress 
+INQ-506    | Pooja Patel        | Service SRV-107    | PowerBI Executive Dashboard    | 2026-11-04 | Resolved    
+INQ-507    | Rohan Gupta        | Program PRG-203    | Cyber Security Internship In   | 2026-11-04 | Closed      
+INQ-508    | Neha Joshi         | Program PRG-208    | Design Bootcamp Group Discou   | 2026-11-04 | In Progress 
+INQ-509    | Deepak Singh       | Service SRV-109    | POS REST API Integration       | 2026-11-05 | New         
+INQ-510    | Ananya Roy         | Program PRG-210    | Frontend Internship Prerequi   | 2026-11-05 | Resolved    
+=========================================================================================================
+Total: 10 record(s)
+
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 2
+
+--- Log New Customer Inquiry ---
+Enter Inquiry ID (e.g. INQ-511): INQ-511
+Enter Existing Customer ID (e.g. CUST-401): CUST-401
+Link to Service or Program? (Service/Program): Program
+Enter Linked Service/Program ID (e.g. SRV-101 or PRG-201): PRG-211
+Enter Subject: Corporate Apprenticeship Sponsorship
+Enter Inquiry Message: Exploring batch sponsorship for 5 fresh engineering hires.
+Enter Date (YYYY-MM-DD) [Press Enter for today]: 2026-11-05
+Enter Status (New/In Progress/Resolved/Closed) [Default: New]: New
+
+Success: Inquiry 'INQ-511' logged for customer 'Rajesh Sharma'.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 3
+
+Enter Inquiry ID to update: INQ-504
+Enter New Status (New/In Progress/Resolved/Closed): In Progress
+
+Success: Inquiry 'INQ-504' status updated to 'In Progress'.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 3
+
+Enter Inquiry ID to update: INQ-999
+Enter New Status (New/In Progress/Resolved/Closed): Closed
+
+Not Found Error: Inquiry with ID 'INQ-999' does not exist.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 6
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 2: Programs, Inquiries, Search & Reports
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 4
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 1
+
+Enter search keyword: Cloud
+
+--- Universal Search Results for 'Cloud' ---
+
+Matching Services (1):
+-------------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+-------------------------------------------------------------------------------------
+SRV-103    | Cloud Architecture & Migrati   | Cloud Solutions      | 4200.00    | Active    
+-------------------------------------------------------------------------------------
+Total: 1 record(s)
+
+Matching Programs (1):
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-202    | Cloud DevOps Engineering Bootcam   | Training       | 8 weeks    | 25     | Open      
+--------------------------------------------------------------------------------------------
+Total: 1 record(s)
+
+Matching Inquiries (1):
+=========================================================================================================
+ID         | Customer           | Linked             | Subject                        | Date       | Status      
+---------------------------------------------------------------------------------------------------------
+INQ-502    | Priya Nair         | Service SRV-103    | AWS Cloud Migration            | 2026-11-02 | In Progress 
+=========================================================================================================
+Total: 1 record(s)
+
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 3
+Enter program keyword (optional, press Enter to skip): 
+Enter program type (optional, press Enter to skip): Training
+Enter status (optional, press Enter to skip): Open
+
+Showing 3 matching program(s):
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-202    | Cloud DevOps Engineering Bootcam   | Training       | 8 weeks    | 25     | Open      
+PRG-205    | Data Engineering & Analytics Tra   | Training       | 8 weeks    | 25     | Open      
+PRG-208    | UI/UX Product Design Bootcamp      | Training       | 4 weeks    | 20     | Open      
+--------------------------------------------------------------------------------------------
+Total: 3 record(s)
+
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 5
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 2: Programs, Inquiries, Search & Reports
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 5
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business & Operations Summary Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 1
+======================================================================
+        VEDA TECHNOLOGY - BUSINESS & OPERATIONAL REPORT
+======================================================================
+
+[1] Services Breakdown by Category:
+--------------------------------------------------
+Category                       | Total Services 
+--------------------------------------------------
+Cloud Solutions                | 1              
+Data Services                  | 1              
+Design Services                | 1              
+Emerging Tech                  | 2              
+Enterprise Solutions           | 1              
+Infrastructure                 | 1              
+Mobile Development             | 1              
+Security                       | 1              
+Software Development           | 2              
+Total Active/Offered Services: 11
+
+[2] Programs Breakdown by Type & Seats Capacity:
+--------------------------------------------------
+Program Type                   | Programs Count 
+--------------------------------------------------
+Internship                     | 5              
+Technology                     | 3              
+Training                       | 3              
+--------------------------------------------------
+Total Programs Offered: 11
+Total Seats Capacity:   265
+  - Seats in Open Programs:    165
+  - Seats in Ongoing Programs: 65
+  - Seats in Closed Programs:  35
+
+[3] Inquiries Status & Resolution Analysis:
+--------------------------------------------------
+Status                    | Count     
+--------------------------------------------------
+New                       | 3         
+In Progress               | 4         
+Resolved                  | 3         
+Closed                    | 1         
+--------------------------------------------------
+Total Inquiries Logged:  11
+Active / Open Inquiries: 7 (63.6%)
+Resolved / Closed:       4 (36.4%)
+======================================================================
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business & Operations Summary Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 5
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 2: Programs, Inquiries, Search & Reports
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 6
+
+Thank you for using Veda Technology Service Management System. Goodbye!
