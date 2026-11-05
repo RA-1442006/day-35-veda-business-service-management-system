@@ -1,0 +1,72 @@
+[
+  {
+    "customer_id": "CUST-401",
+    "name": "Rajesh Sharma",
+    "email": "rajesh.sharma@techcorp.in",
+    "phone": "9876543210",
+    "company": "TechCorp India"
+  },
+  {
+    "customer_id": "CUST-402",
+    "name": "Priya Nair",
+    "email": "priya.nair@innovatelabs.org",
+    "phone": "9823456781",
+    "company": "Innovate Labs"
+  },
+  {
+    "customer_id": "CUST-403",
+    "name": "Vikram Mehta",
+    "email": "vikram@mehtasolutions.com",
+    "phone": "9712345678",
+    "company": "Mehta Solutions"
+  },
+  {
+    "customer_id": "CUST-404",
+    "name": "Sneha Rao",
+    "email": "sneha.rao@gmail.com",
+    "phone": "9845123456",
+    "company": "Individual"
+  },
+  {
+    "customer_id": "CUST-405",
+    "name": "Arun Kumar",
+    "email": "arun.k@nexussystems.com",
+    "phone": "9901234567",
+    "company": "Nexus Systems"
+  },
+  {
+    "customer_id": "CUST-406",
+    "name": "Pooja Patel",
+    "email": "pooja.patel@horizon.co",
+    "phone": "9765432109",
+    "company": "Horizon Enterprise"
+  },
+  {
+    "customer_id": "CUST-407",
+    "name": "Rohan Gupta",
+    "email": "rohan.gupta@outlook.com",
+    "phone": "9898765432",
+    "company": "Individual"
+  },
+  {
+    "customer_id": "CUST-408",
+    "name": "Neha Joshi",
+    "email": "neha.joshi@zenithedutech.in",
+    "phone": "9654321987",
+    "company": "Zenith EduTech"
+  },
+  {
+    "customer_id": "CUST-409",
+    "name": "Deepak Singh",
+    "email": "deepak.s@paramountretail.com",
+    "phone": "9811223344",
+    "company": "Paramount Retail"
+  },
+  {
+    "customer_id": "CUST-410",
+    "name": "Ananya Roy",
+    "email": "ananya.roy@gmail.com",
+    "phone": "9833445566",
+    "company": "Individual"
+  }
+]

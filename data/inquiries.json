@@ -1,0 +1,123 @@
+[
+  {
+    "inquiry_id": "INQ-501",
+    "customer_id": "CUST-401",
+    "customer_name": "Rajesh Sharma",
+    "entity_type": "Service",
+    "entity_id": "SRV-101",
+    "subject": "Web Portal Modernization",
+    "message": "Requesting detailed proposal and timeline for customer portal redesign.",
+    "date": "2026-11-01",
+    "status": "New"
+  },
+  {
+    "inquiry_id": "INQ-502",
+    "customer_id": "CUST-402",
+    "customer_name": "Priya Nair",
+    "entity_type": "Service",
+    "entity_id": "SRV-103",
+    "subject": "AWS Cloud Migration",
+    "message": "Need cost estimation and architecture plan for migrating 15 microservices to AWS.",
+    "date": "2026-11-02",
+    "status": "In Progress"
+  },
+  {
+    "inquiry_id": "INQ-503",
+    "customer_id": "CUST-403",
+    "customer_name": "Vikram Mehta",
+    "entity_type": "Program",
+    "entity_id": "PRG-201",
+    "subject": "Full Stack Internship Placement",
+    "message": "Interested in hiring junior Python interns graduating from upcoming batch.",
+    "date": "2026-11-02",
+    "status": "Resolved"
+  },
+  {
+    "inquiry_id": "INQ-504",
+    "customer_id": "CUST-404",
+    "customer_name": "Sneha Rao",
+    "entity_type": "Program",
+    "entity_id": "PRG-202",
+    "subject": "DevOps Training Schedule",
+    "message": "Requesting syllabus and batch timings for weekend training.",
+    "date": "2026-11-03",
+    "status": "In Progress"
+  },
+  {
+    "inquiry_id": "INQ-505",
+    "customer_id": "CUST-405",
+    "customer_name": "Arun Kumar",
+    "entity_type": "Service",
+    "entity_id": "SRV-106",
+    "subject": "Annual Cyber Security Audit",
+    "message": "Requesting quotation for external penetration testing and ISO audit.",
+    "date": "2026-11-03",
+    "status": "In Progress"
+  },
+  {
+    "inquiry_id": "INQ-506",
+    "customer_id": "CUST-406",
+    "customer_name": "Pooja Patel",
+    "entity_type": "Service",
+    "entity_id": "SRV-107",
+    "subject": "PowerBI Executive Dashboard",
+    "message": "Need automated reporting setup for quarterly executive reviews.",
+    "date": "2026-11-04",
+    "status": "Resolved"
+  },
+  {
+    "inquiry_id": "INQ-507",
+    "customer_id": "CUST-407",
+    "customer_name": "Rohan Gupta",
+    "entity_type": "Program",
+    "entity_id": "PRG-203",
+    "subject": "Cyber Security Internship Interview",
+    "message": "Clarification regarding round 2 interview schedule.",
+    "date": "2026-11-04",
+    "status": "Closed"
+  },
+  {
+    "inquiry_id": "INQ-508",
+    "customer_id": "CUST-408",
+    "customer_name": "Neha Joshi",
+    "entity_type": "Program",
+    "entity_id": "PRG-208",
+    "subject": "Design Bootcamp Group Discount",
+    "message": "Inquiry regarding group pricing for 10 college students.",
+    "date": "2026-11-04",
+    "status": "In Progress"
+  },
+  {
+    "inquiry_id": "INQ-509",
+    "customer_id": "CUST-409",
+    "customer_name": "Deepak Singh",
+    "entity_type": "Service",
+    "entity_id": "SRV-109",
+    "subject": "POS REST API Integration",
+    "message": "Integration requirements for our in-store POS with central database.",
+    "date": "2026-11-05",
+    "status": "New"
+  },
+  {
+    "inquiry_id": "INQ-510",
+    "customer_id": "CUST-410",
+    "customer_name": "Ananya Roy",
+    "entity_type": "Program",
+    "entity_id": "PRG-210",
+    "subject": "Frontend Internship Prerequisites",
+    "message": "Checking if prior React experience is mandatory before applying.",
+    "date": "2026-11-05",
+    "status": "Resolved"
+  },
+  {
+    "inquiry_id": "INQ-511",
+    "customer_id": "CUST-401",
+    "customer_name": "Rajesh Sharma",
+    "entity_type": "Program",
+    "entity_id": "PRG-211",
+    "subject": "Corporate Apprenticeship Sponsorship",
+    "message": "Exploring batch sponsorship for 5 fresh engineering hires.",
+    "date": "2026-11-05",
+    "status": "New"
+  }
+]

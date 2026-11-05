@@ -20,7 +20,7 @@ class Customer:
     @classmethod
     def from_dict(cls, data):
         return cls(
-            customer_id=data.get("customer_id", ""),
+            customer_id=data.get("customer_id") or data.get("id", ""),
             name=data.get("name", ""),
             email=data.get("email", ""),
             phone=data.get("phone", ""),
