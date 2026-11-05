@@ -1,0 +1,101 @@
+[
+  {
+    "program_id": "PRG-201",
+    "title": "Full Stack Python Internship",
+    "type": "Internship",
+    "duration": "12 weeks",
+    "seats": 30,
+    "status": "Open",
+    "fees": 450.0
+  },
+  {
+    "program_id": "PRG-202",
+    "title": "Cloud DevOps Engineering Bootcamp",
+    "type": "Training",
+    "duration": "8 weeks",
+    "seats": 25,
+    "status": "Open",
+    "fees": 600.0
+  },
+  {
+    "program_id": "PRG-203",
+    "title": "Cyber Security Analyst Internship",
+    "type": "Internship",
+    "duration": "10 weeks",
+    "seats": 20,
+    "status": "Open",
+    "fees": 500.0
+  },
+  {
+    "program_id": "PRG-204",
+    "title": "AI & Machine Learning Foundations",
+    "type": "Technology",
+    "duration": "6 weeks",
+    "seats": 35,
+    "status": "Ongoing",
+    "fees": 750.0
+  },
+  {
+    "program_id": "PRG-205",
+    "title": "Data Engineering & Analytics Training",
+    "type": "Training",
+    "duration": "8 weeks",
+    "seats": 25,
+    "status": "Open",
+    "fees": 550.0
+  },
+  {
+    "program_id": "PRG-206",
+    "title": "Mobile App Development Internship",
+    "type": "Internship",
+    "duration": "12 weeks",
+    "seats": 20,
+    "status": "Closed",
+    "fees": 450.0
+  },
+  {
+    "program_id": "PRG-207",
+    "title": "Enterprise Java Microservices",
+    "type": "Technology",
+    "duration": "8 weeks",
+    "seats": 30,
+    "status": "Ongoing",
+    "fees": 700.0
+  },
+  {
+    "program_id": "PRG-208",
+    "title": "UI/UX Product Design Bootcamp",
+    "type": "Training",
+    "duration": "4 weeks",
+    "seats": 20,
+    "status": "Open",
+    "fees": 350.0
+  },
+  {
+    "program_id": "PRG-209",
+    "title": "Blockchain Architecture Program",
+    "type": "Technology",
+    "duration": "6 weeks",
+    "seats": 15,
+    "status": "Closed",
+    "fees": 800.0
+  },
+  {
+    "program_id": "PRG-210",
+    "title": "React & Frontend Mastery Internship",
+    "type": "Internship",
+    "duration": "10 weeks",
+    "seats": 25,
+    "status": "Open",
+    "fees": 400.0
+  },
+  {
+    "program_id": "PRG-211",
+    "title": "Data Science & GenAI Apprenticeship",
+    "type": "Internship",
+    "duration": "16 weeks",
+    "seats": 20,
+    "status": "Open",
+    "fees": 0.0
+  }
+]

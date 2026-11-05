@@ -1,34 +1,39 @@
-# Model representing tech training and internship programs
+# Model representing technology, training, and internship programs
 
 class Program:
-    def __init__(self, program_id, title, program_type, duration, fees, status="Open"):
+    def __init__(self, program_id, title, program_type, duration, seats, status="Open", fees=0.0):
         self.program_id = program_id
         self.title = title
-        self.program_type = program_type  # Internship, Certification, or Training
+        self.program_type = program_type  # Technology, Training, or Internship
         self.duration = duration
-        self.fees = float(fees)
+        self.seats = int(seats)
         self.status = status  # Open, Ongoing, Closed
+        self.fees = float(fees)
 
     def to_dict(self):
         return {
             "program_id": self.program_id,
             "title": self.title,
-            "program_type": self.program_type,
+            "type": self.program_type,
             "duration": self.duration,
-            "fees": self.fees,
-            "status": self.status
+            "seats": self.seats,
+            "status": self.status,
+            "fees": self.fees
         }
 
     @classmethod
     def from_dict(cls, data):
+        # Support both 'type' and 'program_type' keys for compatibility
+        ptype = data.get("type") or data.get("program_type", "Training")
         return cls(
-            program_id=data.get("program_id", ""),
+            program_id=data.get("program_id") or data.get("id", ""),
             title=data.get("title", ""),
-            program_type=data.get("program_type", "Training"),
+            program_type=ptype,
             duration=data.get("duration", ""),
-            fees=data.get("fees", 0.0),
-            status=data.get("status", "Open")
+            seats=data.get("seats", 20),
+            status=data.get("status", "Open"),
+            fees=data.get("fees", 0.0)
         )
 
     def __str__(self):
-        return f"[{self.program_id}] {self.title} ({self.program_type}) | Duration: {self.duration} | Fees: ${self.fees:.2f} | Status: {self.status}"
+        return f"[{self.program_id}] {self.title} | Type: {self.program_type} | Duration: {self.duration} | Seats: {self.seats} | Status: {self.status}"
