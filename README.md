@@ -50,9 +50,25 @@ A Python console application that manages the daily operations of a technology a
   - Robust error handling for invalid input and missing records without app crashes.
 - Real execution transcript recorded in `output/day2_sample_output.txt`.
 
+### Day 3 Progress (Internship Day 37)
+- **Data Integrity & Relational Safety Guards**:
+  - Added relational reference checks in `inquiry_manager.py` and `main.py` (`get_inquiries_for_entity`, `get_inquiries_for_customer`).
+  - Implemented safe deletion logic: actively warns the user and blocks deletion of any Service or Program currently linked to active customer inquiries, preventing broken or orphan references.
+- **Enhanced Search & Filtering (`modules/search_filter.py`)**:
+  - Fully case-insensitive keyword searching across all entity attributes.
+  - Added explicit, friendly "no matching records found" user feedback when queries or filter criteria yield zero matches.
+- **Executive Business Reports & File Export (`modules/reports.py`)**:
+  - Created comprehensive executive summary report with overall enterprise totals (total services, programs, clients, inquiries, seats capacity, and resolution percentage).
+  - Added text export feature (`save_report_to_file`) saving complete timestamped business reports directly to `output/business_summary_report.txt`.
+- **Fault-Tolerant JSON Storage & Corrupt File Recovery (`modules/storage.py`)**:
+  - Enhanced JSON error handling with user-friendly warnings when encountering malformed or corrupted data files.
+  - Tested zero-crash recovery: automatically falls back to clean in-memory state while notifying the user.
+- **Unified Menu & Sub-Menu Polishing (`main.py`)**:
+  - Standardized all sub-menu prompts, table formatting, and success/error message patterns.
+- Real execution transcript recorded in `output/day3_sample_output.txt`.
+
 ### Roadmap for Upcoming Days
-- **Day 3 (Internship Day 37)**: Client relationship history, inquiry priority queues, automated follow-up workflows, and batch service updates.
-- **Day 4 (Internship Day 38)**: Comprehensive business analytics, financial summary reports, CSV/JSON data exporting, and final project packaging.
+- **Day 4 (Internship Day 38)**: Final project integration, multi-format export utilities (CSV/JSON), edge-case regression test suite, code documentation review, and final packaging for deployment.
 
 ---
 
@@ -60,7 +76,7 @@ A Python console application that manages the daily operations of a technology a
 
 ```text
 day-35-veda-business-service-management-system/
-├── main.py                     # Main console application with sub-menus
+├── main.py                     # Main console application with department sub-menus
 ├── models/                     # Core business entities
 │   ├── service.py              # Service model
 │   ├── program.py              # Program model (Technology, Training, Internship)
@@ -71,17 +87,19 @@ day-35-veda-business-service-management-system/
 │   ├── program_manager.py      # Program CRUD operations & capacity tracking
 │   ├── inquiry_manager.py      # Customer & Inquiry lifecycle management
 │   ├── search_filter.py        # Universal search & targeted filtering
-│   ├── reports.py              # Business analytics & capacity metrics
-│   ├── storage.py              # JSON file reading & writing utilities
+│   ├── reports.py              # Business analytics, summary totals & file export
+│   ├── storage.py              # Fault-tolerant JSON file reading & writing
 │   └── validators.py           # Input validation across all models
 ├── data/                       # Synthetic datasets (100% fake)
 │   ├── services.json           # Tech & digital services records
 │   ├── programs.json           # Tech, training & internship programs
 │   ├── customers.json          # Client & business customer accounts
 │   └── inquiries.json          # Customer inquiries linked to services/programs
-├── output/                     # Execution transcripts
+├── output/                     # Execution transcripts & saved reports
 │   ├── sample_output.txt       # Day 1 sample run transcript
 │   └── day2_sample_output.txt  # Day 2 sample run transcript
+│   ├── day3_sample_output.txt  # Day 3 sample run transcript
+│   └── business_summary_report.txt # Saved executive business report
 ├── README.md                   # Project documentation & progress logs
 ├── .gitignore                  # Git ignore rules
 └── requirements.txt            # Project dependencies (standard library)
@@ -107,11 +125,11 @@ day-35-veda-business-service-management-system/
    ```
 
 3. Navigate through the top-level departments using the numbered menus:
-   - `1`: Service Management
-   - `2`: Program Management
-   - `3`: Customer & Inquiry Management
-   - `4`: Search & Filter Records
-   - `5`: Business Reports
+   - `1`: Service Management (View, Add, Search, Filter, Update, Safe Delete)
+   - `2`: Program Management (View, Add, Filter by Type/Status, Update, Safe Delete)
+   - `3`: Customer & Inquiry Management (Inquiries, Customer Registration, Status Updates)
+   - `4`: Search & Filter Records (Universal search and filtered queries with zero-result feedback)
+   - `5`: Business Reports (Executive totals, category breakdown, seats capacity, and text file export)
    - `6`: Exit
 
 ---
@@ -119,29 +137,33 @@ day-35-veda-business-service-management-system/
 ## Features Completed So Far
 
 1. **Service Management**:
-   - Add, view, search, filter, update status, and delete tech services.
+   - Add, view, search, filter, update status, and safe delete tech services.
+   - Relational link check blocks deletion if inquiries reference the service.
    - Persistent storage in `data/services.json`.
 
 2. **Program Management**:
    - Manage Technology programs, Corporate Trainings, and Internships.
    - Track available seats and status (`Open`, `Ongoing`, `Closed`).
+   - Relational link check blocks deletion if inquiries reference the program.
    - Persistent storage in `data/programs.json`.
 
 3. **Customer & Inquiry Tracking**:
    - Maintain customer profiles with email and phone validation.
    - Log inquiries linked to actual services or programs.
-   - Update inquiry lifecycle (`New` -> `In Progress` -> `Resolved` -> `Closed`).
+   - Inquiry status lifecycle (`New` -> `In Progress` -> `Resolved` -> `Closed`).
    - Persistent storage in `data/customers.json` and `data/inquiries.json`.
 
 4. **Universal Search & Filtering**:
-   - Search across all three entity types with a single search term.
-   - Custom filters by category, program type, and status.
+   - Case-insensitive search across all three entity types with a single search term.
+   - Multi-attribute targeted filters with explicit feedback when no records match.
 
-5. **Operational Reports**:
+5. **Operational Reports & Export**:
    - Services breakdown by business category.
    - Programs by type and total seat capacity.
-   - Inquiries resolution rates (open vs resolved).
+   - Inquiries resolution efficiency metrics.
+   - Overall enterprise summary totals.
+   - Export full report to `output/business_summary_report.txt`.
 
 6. **Defensive Validation & Exception Handling**:
-   - Guarantees valid numeric inputs, non-empty fields, unique IDs, and valid entity links.
-   - Graceful handling of missing records and corrupted/missing files without application crashes.
+   - Input validation for types, ranges, duplicate IDs, and entity link validity.
+   - Zero-crash recovery when missing or corrupt JSON files are encountered.
