@@ -13,7 +13,7 @@ def load_json(file_path):
             data = json.load(f)
             return data
     except json.JSONDecodeError:
-        print(f"Error: {file_path} contains invalid or corrupt JSON. Initializing empty list.")
+        print(f"Warning: File '{file_path}' contains corrupted or invalid JSON data. Initialized with empty records to prevent system crash.")
         return []
     except Exception as e:
         print(f"Unexpected error while reading {file_path}: {e}")

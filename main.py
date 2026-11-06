@@ -13,6 +13,8 @@ from modules.search_filter import (
 )
 from modules.reports import (
     print_business_report,
+    build_business_report_text,
+    save_report_to_file,
     get_services_by_category,
     get_programs_by_type,
     get_total_program_seats,
@@ -27,7 +29,7 @@ def print_separator(char="-", length=85):
 
 def display_services(services):
     if not services:
-        print("No services found.")
+        print("No services found matching criteria.")
         return
     print_separator()
     print(f"{'ID':<10} | {'Service Name':<30} | {'Category':<20} | {'Price ($)':<10} | {'Status':<10}")
@@ -39,7 +41,7 @@ def display_services(services):
 
 def display_programs(programs):
     if not programs:
-        print("No programs found.")
+        print("No programs found matching criteria.")
         return
     print_separator("-", 92)
     print(f"{'ID':<10} | {'Program Title':<34} | {'Type':<14} | {'Duration':<10} | {'Seats':<6} | {'Status':<10}")
@@ -63,7 +65,7 @@ def display_customers(customers):
 
 def display_inquiries(inquiries):
     if not inquiries:
-        print("No inquiries found.")
+        print("No inquiries found matching criteria.")
         return
     print_separator("=", 105)
     print(f"{'ID':<10} | {'Customer':<18} | {'Linked':<18} | {'Subject':<30} | {'Date':<10} | {'Status':<12}")
@@ -76,7 +78,7 @@ def display_inquiries(inquiries):
 
 # --- Service Sub-menu ---
 
-def handle_service_menu(service_mgr):
+def handle_service_menu(service_mgr, inquiry_mgr):
     while True:
         print("\n" + "=" * 45)
         print("        SERVICE MANAGEMENT MENU")
@@ -115,16 +117,22 @@ def handle_service_menu(service_mgr):
             kw = input("\nEnter search keyword (name or category): ").strip()
             try:
                 results = service_mgr.search_services(kw)
-                print(f"\nFound {len(results)} service(s) for '{kw}':")
-                display_services(results)
+                if not results:
+                    print(f"\nNo services found matching '{kw}'.")
+                else:
+                    print(f"\nFound {len(results)} service(s) for '{kw}':")
+                    display_services(results)
             except ValueError as e:
                 print(f"\nInput Error: {e}")
         elif choice == "4":
             st = input("\nEnter status to filter (Active/Inactive): ").strip()
             try:
                 results = service_mgr.filter_by_status(st)
-                print(f"\nFound {len(results)} service(s) with status '{st}':")
-                display_services(results)
+                if not results:
+                    print(f"\nNo services found with status '{st}'.")
+                else:
+                    print(f"\nFound {len(results)} service(s) with status '{st}':")
+                    display_services(results)
             except ValueError as e:
                 print(f"\nValidation Error: {e}")
         elif choice == "5":
@@ -139,7 +147,21 @@ def handle_service_menu(service_mgr):
                 print(f"\nValidation Error: {e}")
         elif choice == "6":
             sid = input("\nEnter Service ID to delete: ").strip()
-            confirm = input(f"Are you sure you want to delete '{sid}'? (y/n): ").strip().lower()
+            # Verify record existence first
+            srv = service_mgr.find_by_id(sid)
+            if not srv:
+                print(f"\nNot Found Error: Service with ID '{sid}' does not exist.")
+                continue
+
+            # Safe data link check: warn and block if inquiries are linked
+            linked = inquiry_mgr.get_inquiries_for_entity("Service", sid)
+            if linked:
+                linked_ids = ", ".join([i.inquiry_id for i in linked])
+                print(f"\nWarning: Cannot delete Service '{sid}'. It is currently linked to {len(linked)} inquiry/inquiries: {linked_ids}.")
+                print("Action blocked to preserve data integrity. Please resolve or remove linked inquiries first.")
+                continue
+
+            confirm = input(f"Are you sure you want to delete service '{sid} - {srv.name}'? (y/n): ").strip().lower()
             if confirm == "y":
                 try:
                     deleted = service_mgr.delete_service(sid)
@@ -155,7 +177,7 @@ def handle_service_menu(service_mgr):
 
 # --- Program Sub-menu ---
 
-def handle_program_menu(program_mgr):
+def handle_program_menu(program_mgr, inquiry_mgr):
     while True:
         print("\n" + "=" * 45)
         print("        PROGRAM MANAGEMENT MENU")
@@ -194,16 +216,22 @@ def handle_program_menu(program_mgr):
             ptype = input("\nEnter Type to filter (Technology/Training/Internship): ").strip()
             try:
                 results = program_mgr.filter_by_type(ptype)
-                print(f"\nFound {len(results)} program(s) of type '{ptype}':")
-                display_programs(results)
+                if not results:
+                    print(f"\nNo programs found of type '{ptype}'.")
+                else:
+                    print(f"\nFound {len(results)} program(s) of type '{ptype}':")
+                    display_programs(results)
             except ValueError as e:
                 print(f"\nValidation Error: {e}")
         elif choice == "4":
             st = input("\nEnter Status to filter (Open/Ongoing/Closed): ").strip()
             try:
                 results = program_mgr.filter_by_status(st)
-                print(f"\nFound {len(results)} program(s) with status '{st}':")
-                display_programs(results)
+                if not results:
+                    print(f"\nNo programs found with status '{st}'.")
+                else:
+                    print(f"\nFound {len(results)} program(s) with status '{st}':")
+                    display_programs(results)
             except ValueError as e:
                 print(f"\nValidation Error: {e}")
         elif choice == "5":
@@ -218,7 +246,21 @@ def handle_program_menu(program_mgr):
                 print(f"\nValidation Error: {e}")
         elif choice == "6":
             pid = input("\nEnter Program ID to delete: ").strip()
-            confirm = input(f"Are you sure you want to delete '{pid}'? (y/n): ").strip().lower()
+            # Verify record existence first
+            prg = program_mgr.find_by_id(pid)
+            if not prg:
+                print(f"\nNot Found Error: Program with ID '{pid}' does not exist.")
+                continue
+
+            # Safe data link check: warn and block if inquiries are linked
+            linked = inquiry_mgr.get_inquiries_for_entity("Program", pid)
+            if linked:
+                linked_ids = ", ".join([i.inquiry_id for i in linked])
+                print(f"\nWarning: Cannot delete Program '{pid}'. It is currently linked to {len(linked)} inquiry/inquiries: {linked_ids}.")
+                print("Action blocked to preserve data integrity. Please resolve or remove linked inquiries first.")
+                continue
+
+            confirm = input(f"Are you sure you want to delete program '{pid} - {prg.title}'? (y/n): ").strip().lower()
             if confirm == "y":
                 try:
                     deleted = program_mgr.delete_program(pid)
@@ -368,13 +410,17 @@ def handle_search_filter_menu(service_mgr, program_mgr, inquiry_mgr):
                 inquiry_mgr.get_all_inquiries(),
                 kw
             )
-            print(f"\n--- Universal Search Results for '{kw}' ---")
-            print(f"\nMatching Services ({len(results['services'])}):")
-            display_services(results['services'])
-            print(f"Matching Programs ({len(results['programs'])}):")
-            display_programs(results['programs'])
-            print(f"Matching Inquiries ({len(results['inquiries'])}):")
-            display_inquiries(results['inquiries'])
+            total_matches = len(results['services']) + len(results['programs']) + len(results['inquiries'])
+            if total_matches == 0:
+                print(f"\nNo matching records found across services, programs, or inquiries for '{kw}'.\n")
+            else:
+                print(f"\n--- Universal Search Results for '{kw}' (Total Matches: {total_matches}) ---")
+                print(f"\nMatching Services ({len(results['services'])}):")
+                display_services(results['services'])
+                print(f"Matching Programs ({len(results['programs'])}):")
+                display_programs(results['programs'])
+                print(f"Matching Inquiries ({len(results['inquiries'])}):")
+                display_inquiries(results['inquiries'])
 
         elif choice == "2":
             kw = input("Enter service keyword (optional, press Enter to skip): ").strip()
@@ -385,8 +431,11 @@ def handle_search_filter_menu(service_mgr, program_mgr, inquiry_mgr):
             if kw:
                 services = search_services(services, kw)
             filtered = filter_services(services, category=cat, status=st)
-            print(f"\nShowing {len(filtered)} matching service(s):")
-            display_services(filtered)
+            if not filtered:
+                print("\nNo services found matching your search or filter criteria.\n")
+            else:
+                print(f"\nShowing {len(filtered)} matching service(s):")
+                display_services(filtered)
 
         elif choice == "3":
             kw = input("Enter program keyword (optional, press Enter to skip): ").strip()
@@ -397,8 +446,11 @@ def handle_search_filter_menu(service_mgr, program_mgr, inquiry_mgr):
             if kw:
                 programs = search_programs(programs, kw)
             filtered = filter_programs(programs, program_type=ptype, status=st)
-            print(f"\nShowing {len(filtered)} matching program(s):")
-            display_programs(filtered)
+            if not filtered:
+                print("\nNo programs found matching your search or filter criteria.\n")
+            else:
+                print(f"\nShowing {len(filtered)} matching program(s):")
+                display_programs(filtered)
 
         elif choice == "4":
             kw = input("Enter inquiry keyword (optional, press Enter to skip): ").strip()
@@ -409,8 +461,11 @@ def handle_search_filter_menu(service_mgr, program_mgr, inquiry_mgr):
             if kw:
                 inquiries = search_inquiries(inquiries, kw)
             filtered = filter_inquiries(inquiries, status=st, entity_type=etype)
-            print(f"\nShowing {len(filtered)} matching inquiry/inquiries:")
-            display_inquiries(filtered)
+            if not filtered:
+                print("\nNo inquiries found matching your search or filter criteria.\n")
+            else:
+                print(f"\nShowing {len(filtered)} matching inquiry/inquiries:")
+                display_inquiries(filtered)
 
         elif choice == "5":
             break
@@ -424,27 +479,29 @@ def handle_reports_menu(service_mgr, program_mgr, inquiry_mgr):
         print("\n" + "=" * 45)
         print("        BUSINESS REPORTS MENU")
         print("=" * 45)
-        print("1. Full Business & Operations Summary Report")
+        print("1. Full Business Summary & Operations Report")
         print("2. Services Breakdown by Category")
         print("3. Programs Breakdown by Type & Total Seats")
         print("4. Inquiries Status & Resolution Metrics")
-        print("5. Back to Main Menu")
+        print("5. Save Full Business Summary Report to File")
+        print("6. Back to Main Menu")
         print("=" * 45)
 
-        choice = input("Enter choice (1-5): ").strip()
+        choice = input("Enter choice (1-6): ").strip()
         services = service_mgr.get_all_services()
         programs = program_mgr.get_all_programs()
+        customers = inquiry_mgr.get_all_customers()
         inquiries = inquiry_mgr.get_all_inquiries()
 
         if choice == "1":
-            print_business_report(services, programs, inquiries)
+            print_business_report(services, programs, customers, inquiries)
         elif choice == "2":
             cats = get_services_by_category(services)
             print("\n--- Services Breakdown by Category ---")
-            print(f"{'Category':<30} | {'Count':<10}")
+            print(f"{'Category':<32} | {'Count':<10}")
             print("-" * 45)
             for c, count in sorted(cats.items()):
-                print(f"{c:<30} | {count:<10}")
+                print(f"{c:<32} | {count:<10}")
             print(f"Total Services: {len(services)}\n")
         elif choice == "3":
             types = get_programs_by_type(programs)
@@ -462,20 +519,25 @@ def handle_reports_menu(service_mgr, program_mgr, inquiry_mgr):
             print("\n--- Inquiries Status & Resolution ---")
             for st, count in stats.items():
                 print(f"{st:<20}: {count}")
-            print(f"Total Inquiries:  {res['total']}")
-            print(f"Active / Open:    {res['open_count']} ({res['open_pct']:.1f}%)")
-            print(f"Resolved / Closed: {res['resolved_count']} ({res['resolved_pct']:.1f}%)\n")
+            print(f"Total Inquiries:   {res['total']}")
+            print(f"Active / Open:     {res['open_count']} ({res['open_pct']:.1f}%)")
+            print(f"Resolved / Closed:  {res['resolved_count']} ({res['resolved_pct']:.1f}%)\n")
         elif choice == "5":
+            report_text = build_business_report_text(services, programs, customers, inquiries)
+            saved_path = save_report_to_file(report_text)
+            print(f"\nSuccess: Full business summary report saved successfully to:")
+            print(f"  {saved_path}\n")
+        elif choice == "6":
             break
         else:
-            print("Invalid option. Please choose 1-5.")
+            print("Invalid option. Please choose 1-6.")
 
 # --- Main Menu Loop ---
 
 def show_main_menu():
     print("=" * 55)
     print("  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT")
-    print("  Day 2: Programs, Inquiries, Search & Reports")
+    print("  Day 3: Integrated Operations & Data Integrity")
     print("=" * 55)
     print("1. Service Management")
     print("2. Program Management")
@@ -496,9 +558,9 @@ def main():
             choice = input("Enter choice (1-6): ").strip()
 
             if choice == "1":
-                handle_service_menu(service_mgr)
+                handle_service_menu(service_mgr, inquiry_mgr)
             elif choice == "2":
-                handle_program_menu(program_mgr)
+                handle_program_menu(program_mgr, inquiry_mgr)
             elif choice == "3":
                 handle_inquiry_menu(inquiry_mgr, service_mgr, program_mgr)
             elif choice == "4":

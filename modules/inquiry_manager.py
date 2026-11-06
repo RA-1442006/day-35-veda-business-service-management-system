@@ -142,6 +142,23 @@ class InquiryManager:
         valid_status = validate_inquiry_status(status)
         return [inq for inq in self.inquiries if inq.status.lower() == valid_status.lower()]
 
+    def get_inquiries_for_entity(self, entity_type, entity_id):
+        # Find all inquiries linked to a specific service or program
+        cleaned_type = str(entity_type).strip().lower()
+        cleaned_id = str(entity_id).strip().upper()
+        return [
+            inq for inq in self.inquiries
+            if inq.entity_type.lower() == cleaned_type and inq.entity_id.upper() == cleaned_id
+        ]
+
+    def get_inquiries_for_customer(self, customer_id):
+        # Find all inquiries submitted by a given customer
+        cleaned_id = str(customer_id).strip().upper()
+        return [
+            inq for inq in self.inquiries
+            if inq.customer_id.upper() == cleaned_id
+        ]
+
     def delete_inquiry(self, inquiry_id):
         inquiry = self.find_inquiry_by_id(inquiry_id)
         if not inquiry:
