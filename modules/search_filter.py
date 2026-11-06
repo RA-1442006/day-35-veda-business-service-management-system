@@ -1,4 +1,4 @@
-# Advanced search and filtering utilities across services, programs, and inquiries
+# Search and filtering utilities across services, programs, and inquiries
 
 def search_services(services, keyword):
     if not keyword or not str(keyword).strip():
@@ -6,7 +6,10 @@ def search_services(services, keyword):
     term = str(keyword).strip().lower()
     return [
         s for s in services
-        if term in s.service_id.lower() or term in s.name.lower() or term in s.category.lower()
+        if term in s.service_id.lower()
+        or term in s.name.lower()
+        or term in s.category.lower()
+        or term in s.status.lower()
     ]
 
 def filter_services(services, category=None, status=None):
@@ -25,7 +28,10 @@ def search_programs(programs, keyword):
     term = str(keyword).strip().lower()
     return [
         p for p in programs
-        if term in p.program_id.lower() or term in p.title.lower() or term in p.program_type.lower()
+        if term in p.program_id.lower()
+        or term in p.title.lower()
+        or term in p.program_type.lower()
+        or term in p.status.lower()
     ]
 
 def filter_programs(programs, program_type=None, status=None):
@@ -48,8 +54,10 @@ def search_inquiries(inquiries, keyword):
         or term in i.customer_name.lower()
         or term in i.customer_id.lower()
         or term in i.entity_id.lower()
+        or term in i.entity_type.lower()
         or term in i.subject.lower()
         or term in i.message.lower()
+        or term in i.status.lower()
     ]
 
 def filter_inquiries(inquiries, status=None, entity_type=None):
