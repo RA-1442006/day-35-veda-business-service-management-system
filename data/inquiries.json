@@ -119,5 +119,16 @@
     "message": "Exploring batch sponsorship for 5 fresh engineering hires.",
     "date": "2026-11-05",
     "status": "New"
+  },
+  {
+    "inquiry_id": "INQ-512",
+    "customer_id": "CUST-411",
+    "customer_name": "Sunita Deshmukh",
+    "entity_type": "Service",
+    "entity_id": "SRV-112",
+    "subject": "Cloud Security Audit Proposal",
+    "message": "Requesting quote and scope of work for infrastructure audit.",
+    "date": "2026-11-07",
+    "status": "In Progress"
   }
 ]

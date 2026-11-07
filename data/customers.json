@@ -68,5 +68,12 @@
     "email": "ananya.roy@gmail.com",
     "phone": "9833445566",
     "company": "Individual"
+  },
+  {
+    "customer_id": "CUST-411",
+    "name": "Sunita Deshmukh",
+    "email": "sunita.d@vertexit.com",
+    "phone": "9871122334",
+    "company": "Vertex IT Solutions"
   }
 ]

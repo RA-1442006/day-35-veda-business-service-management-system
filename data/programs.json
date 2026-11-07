@@ -32,7 +32,7 @@
     "type": "Technology",
     "duration": "6 weeks",
     "seats": 35,
-    "status": "Ongoing",
+    "status": "Closed",
     "fees": 750.0
   },
   {
@@ -95,6 +95,15 @@
     "type": "Internship",
     "duration": "16 weeks",
     "seats": 20,
+    "status": "Open",
+    "fees": 0.0
+  },
+  {
+    "program_id": "PRG-212",
+    "title": "DevOps & SRE Masterclass",
+    "type": "Training",
+    "duration": "6 weeks",
+    "seats": 25,
     "status": "Open",
     "fees": 0.0
   }

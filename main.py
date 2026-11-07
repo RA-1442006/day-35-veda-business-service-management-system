@@ -537,7 +537,7 @@ def handle_reports_menu(service_mgr, program_mgr, inquiry_mgr):
 def show_main_menu():
     print("=" * 55)
     print("  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT")
-    print("  Day 3: Integrated Operations & Data Integrity")
+    print("  Day 4: Production Foundation & System Finalization")
     print("=" * 55)
     print("1. Service Management")
     print("2. Program Management")

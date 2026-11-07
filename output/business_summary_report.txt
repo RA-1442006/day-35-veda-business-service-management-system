@@ -1,24 +1,24 @@
 ========================================================================
         VEDA TECHNOLOGY - EXECUTIVE BUSINESS SUMMARY REPORT
 ========================================================================
-Report Generated: 2026-11-06 11:18:38
+Report Generated: 2026-11-07 18:16:45
 Data Source: Synthetic Operational Records
 ------------------------------------------------------------------------
 
 [1] Executive Summary & Overall Totals:
 --------------------------------------------------
-Total Technology Services Offered:  11
-Total Training/Tech Programs:      11
-Total Registered Business Clients: 10
-Total Customer Inquiries Logged:   11
-Total Program Seats Capacity:      265 (Open: 165)
-Inquiry Resolution Efficiency:     36.4%
+Total Technology Services Offered:  12
+Total Training/Tech Programs:      12
+Total Registered Business Clients: 11
+Total Customer Inquiries Logged:   12
+Total Program Seats Capacity:      290 (Open: 190)
+Inquiry Resolution Efficiency:     33.3%
 
 [2] Services Breakdown by Category:
 --------------------------------------------------
 Category                         | Total Services 
 --------------------------------------------------
-Cloud Solutions                  | 1              
+Cloud Solutions                  | 2              
 Data Services                    | 1              
 Design Services                  | 1              
 Emerging Tech                    | 2              
@@ -27,7 +27,7 @@ Infrastructure                   | 1
 Mobile Development               | 1              
 Security                         | 1              
 Software Development             | 2              
-Total Services: 11
+Total Services: 12
 
 [3] Programs Breakdown by Type & Seats Capacity:
 --------------------------------------------------
@@ -35,24 +35,24 @@ Program Type                     | Programs Count
 --------------------------------------------------
 Internship                       | 5              
 Technology                       | 3              
-Training                         | 3              
+Training                         | 4              
 --------------------------------------------------
-Total Programs Offered: 11
-Total Seats Capacity:   265
-  - Seats in Open Programs:    165
-  - Seats in Ongoing Programs: 65
-  - Seats in Closed Programs:  35
+Total Programs Offered: 12
+Total Seats Capacity:   290
+  - Seats in Open Programs:    190
+  - Seats in Ongoing Programs: 30
+  - Seats in Closed Programs:  70
 
 [4] Inquiries Status & Resolution Analysis:
 --------------------------------------------------
 Status                    | Count     
 --------------------------------------------------
 New                       | 3         
-In Progress               | 4         
+In Progress               | 5         
 Resolved                  | 3         
 Closed                    | 1         
 --------------------------------------------------
-Total Inquiries Logged:  11
-Active / Open Inquiries: 7 (63.6%)
-Resolved / Closed:       4 (36.4%)
+Total Inquiries Logged:  12
+Active / Open Inquiries: 8 (66.7%)
+Resolved / Closed:       4 (33.3%)
 ========================================================================
