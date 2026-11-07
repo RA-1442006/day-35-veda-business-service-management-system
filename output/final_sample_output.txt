@@ -1,0 +1,774 @@
+========================================================================
+  PRE-RUN DIAGNOSTIC: CORRUPT FILE & ROBUSTNESS VERIFICATION
+========================================================================
+[Testing Corrupt JSON File Handling]
+Warning: File 'C:\Users\realc\.gemini\antigravity\scratch\day-35-veda-business-service-management-system\data\corrupted_sample.json' contains corrupted or invalid JSON data. Initialized with empty records to prevent system crash.
+Fallback safe records loaded: []
+Corrupt file test passed: program recovered safely with zero crashes.
+
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 1
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 1
+
+--- All Technology Services ---
+-------------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+-------------------------------------------------------------------------------------
+SRV-101    | Custom Web App Development     | Software Developme   | 2400.00    | Active    
+SRV-102    | Cross-Platform Mobile Apps     | Mobile Development   | 3100.00    | Active    
+SRV-103    | Cloud Architecture & Migrati   | Cloud Solutions      | 4200.00    | Active    
+SRV-104    | UI/UX Product Design           | Design Services      | 1300.00    | Active    
+SRV-105    | DevOps & CI/CD Pipeline Setu   | Infrastructure       | 2200.00    | Active    
+SRV-106    | Cyber Security Audit           | Security             | 2800.00    | Active    
+SRV-107    | Data Analytics & Reporting     | Data Services        | 1900.00    | Active    
+SRV-108    | Enterprise ERP Implementatio   | Enterprise Solutio   | 6500.00    | Inactive  
+SRV-109    | REST API Development           | Software Developme   | 1600.00    | Active    
+SRV-110    | AI Virtual Assistant Setup     | Emerging Tech        | 2300.00    | Active    
+SRV-111    | AI Automation & Workflow Set   | Emerging Tech        | 1850.00    | Active    
+-------------------------------------------------------------------------------------
+Total: 11 record(s)
+
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 2
+
+--- Add New Technology Service ---
+Enter Service ID (e.g. SRV-112): SRV-112
+Enter Service Name: Enterprise Cloud Security Consulting
+Enter Category: Cloud Solutions
+Enter Price ($): 3400.0
+Enter Duration (e.g. 4 weeks): 4 weeks
+Enter Status (Active/Inactive) [Default: Active]: Active
+
+Success: Service 'SRV-112 - Enterprise Cloud Security Consulting' added.
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 4
+
+Enter status to filter (Active/Inactive): Active
+
+Found 11 service(s) with status 'Active':
+-------------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+-------------------------------------------------------------------------------------
+SRV-101    | Custom Web App Development     | Software Developme   | 2400.00    | Active    
+SRV-102    | Cross-Platform Mobile Apps     | Mobile Development   | 3100.00    | Active    
+SRV-103    | Cloud Architecture & Migrati   | Cloud Solutions      | 4200.00    | Active    
+SRV-104    | UI/UX Product Design           | Design Services      | 1300.00    | Active    
+SRV-105    | DevOps & CI/CD Pipeline Setu   | Infrastructure       | 2200.00    | Active    
+SRV-106    | Cyber Security Audit           | Security             | 2800.00    | Active    
+SRV-107    | Data Analytics & Reporting     | Data Services        | 1900.00    | Active    
+SRV-109    | REST API Development           | Software Developme   | 1600.00    | Active    
+SRV-110    | AI Virtual Assistant Setup     | Emerging Tech        | 2300.00    | Active    
+SRV-111    | AI Automation & Workflow Set   | Emerging Tech        | 1850.00    | Active    
+SRV-112    | Enterprise Cloud Security Co   | Cloud Solutions      | 3400.00    | Active    
+-------------------------------------------------------------------------------------
+Total: 11 record(s)
+
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 6
+
+Enter Service ID to delete: SRV-101
+
+Warning: Cannot delete Service 'SRV-101'. It is currently linked to 1 inquiry/inquiries: INQ-501.
+Action blocked to preserve data integrity. Please resolve or remove linked inquiries first.
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 2
+
+--- Add New Technology Service ---
+Enter Service ID (e.g. SRV-112): SRV-999
+Enter Service Name: Invalid Test Service
+Enter Category: Test Category
+Enter Price ($): -500
+Enter Duration (e.g. 4 weeks): 2 weeks
+Enter Status (Active/Inactive) [Default: Active]: Active
+
+Validation Error: Price must be greater than zero.
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 5
+
+Enter Service ID to update: SRV-999
+Enter New Status (Active/Inactive): Active
+
+Not Found Error: Service with ID 'SRV-999' does not exist.
+
+=============================================
+        SERVICE MANAGEMENT MENU
+=============================================
+1. View All Services
+2. Add New Service
+3. Search Services
+4. Filter Services by Status
+5. Update Service Status
+6. Delete a Service
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 7
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 2
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 1
+
+--- All Technology & Training Programs ---
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-201    | Full Stack Python Internship       | Internship     | 12 weeks   | 30     | Open      
+PRG-202    | Cloud DevOps Engineering Bootcam   | Training       | 8 weeks    | 25     | Open      
+PRG-203    | Cyber Security Analyst Internshi   | Internship     | 10 weeks   | 20     | Open      
+PRG-204    | AI & Machine Learning Foundation   | Technology     | 6 weeks    | 35     | Ongoing   
+PRG-205    | Data Engineering & Analytics Tra   | Training       | 8 weeks    | 25     | Open      
+PRG-206    | Mobile App Development Internshi   | Internship     | 12 weeks   | 20     | Closed    
+PRG-207    | Enterprise Java Microservices      | Technology     | 8 weeks    | 30     | Ongoing   
+PRG-208    | UI/UX Product Design Bootcamp      | Training       | 4 weeks    | 20     | Open      
+PRG-209    | Blockchain Architecture Program    | Technology     | 6 weeks    | 15     | Closed    
+PRG-210    | React & Frontend Mastery Interns   | Internship     | 10 weeks   | 25     | Open      
+PRG-211    | Data Science & GenAI Apprentices   | Internship     | 16 weeks   | 20     | Open      
+--------------------------------------------------------------------------------------------
+Total: 11 record(s)
+
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 2
+
+--- Add New Program ---
+Enter Program ID (e.g. PRG-211): PRG-212
+Enter Program Title: DevOps & SRE Masterclass
+Enter Type (Technology/Training/Internship): Training
+Enter Duration (e.g. 8 weeks): 6 weeks
+Enter Available Seats (e.g. 25): 25
+Enter Status (Open/Ongoing/Closed) [Default: Open]: Open
+
+Success: Program 'PRG-212 - DevOps & SRE Masterclass' added.
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 3
+
+Enter Type to filter (Technology/Training/Internship): Internship
+
+Found 5 program(s) of type 'Internship':
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-201    | Full Stack Python Internship       | Internship     | 12 weeks   | 30     | Open      
+PRG-203    | Cyber Security Analyst Internshi   | Internship     | 10 weeks   | 20     | Open      
+PRG-206    | Mobile App Development Internshi   | Internship     | 12 weeks   | 20     | Closed    
+PRG-210    | React & Frontend Mastery Interns   | Internship     | 10 weeks   | 25     | Open      
+PRG-211    | Data Science & GenAI Apprentices   | Internship     | 16 weeks   | 20     | Open      
+--------------------------------------------------------------------------------------------
+Total: 5 record(s)
+
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 5
+
+Enter Program ID to update: PRG-204
+Enter New Status (Open/Ongoing/Closed): Closed
+
+Success: Program 'PRG-204' status updated to 'Closed'.
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 6
+
+Enter Program ID to delete: PRG-201
+
+Warning: Cannot delete Program 'PRG-201'. It is currently linked to 1 inquiry/inquiries: INQ-503.
+Action blocked to preserve data integrity. Please resolve or remove linked inquiries first.
+
+=============================================
+        PROGRAM MANAGEMENT MENU
+=============================================
+1. View All Programs
+2. Add New Program
+3. Filter Programs by Type
+4. Filter Programs by Status
+5. Update Program Status
+6. Delete a Program
+7. Back to Main Menu
+=============================================
+Enter choice (1-7): 7
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 3
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 4
+
+--- All Registered Customers ---
+-------------------------------------------------------------------------------------
+ID         | Customer Name        | Company                | Email                     | Phone       
+-------------------------------------------------------------------------------------
+CUST-401   | Rajesh Sharma        | TechCorp India         | rajesh.sharma@techcorp.   | 9876543210  
+CUST-402   | Priya Nair           | Innovate Labs          | priya.nair@innovatelabs   | 9823456781  
+CUST-403   | Vikram Mehta         | Mehta Solutions        | vikram@mehtasolutions.c   | 9712345678  
+CUST-404   | Sneha Rao            | Individual             | sneha.rao@gmail.com       | 9845123456  
+CUST-405   | Arun Kumar           | Nexus Systems          | arun.k@nexussystems.com   | 9901234567  
+CUST-406   | Pooja Patel          | Horizon Enterprise     | pooja.patel@horizon.co    | 9765432109  
+CUST-407   | Rohan Gupta          | Individual             | rohan.gupta@outlook.com   | 9898765432  
+CUST-408   | Neha Joshi           | Zenith EduTech         | neha.joshi@zenithedutec   | 9654321987  
+CUST-409   | Deepak Singh         | Paramount Retail       | deepak.s@paramountretai   | 9811223344  
+CUST-410   | Ananya Roy           | Individual             | ananya.roy@gmail.com      | 9833445566  
+-------------------------------------------------------------------------------------
+Total: 10 record(s)
+
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 5
+
+--- Register New Customer ---
+Enter Customer ID (e.g. CUST-411): CUST-411
+Enter Full Name: Sunita Deshmukh
+Enter Email: sunita.d@vertexit.com
+Enter Phone: 9871122334
+Enter Company [Default: Individual]: Vertex IT Solutions
+
+Success: Customer 'CUST-411 - Sunita Deshmukh' registered.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 1
+
+--- All Customer Inquiries ---
+=========================================================================================================
+ID         | Customer           | Linked             | Subject                        | Date       | Status      
+---------------------------------------------------------------------------------------------------------
+INQ-501    | Rajesh Sharma      | Service SRV-101    | Web Portal Modernization       | 2026-11-01 | New         
+INQ-502    | Priya Nair         | Service SRV-103    | AWS Cloud Migration            | 2026-11-02 | In Progress 
+INQ-503    | Vikram Mehta       | Program PRG-201    | Full Stack Internship Placem   | 2026-11-02 | Resolved    
+INQ-504    | Sneha Rao          | Program PRG-202    | DevOps Training Schedule       | 2026-11-03 | In Progress 
+INQ-505    | Arun Kumar         | Service SRV-106    | Annual Cyber Security Audit    | 2026-11-03 | In Progress 
+INQ-506    | Pooja Patel        | Service SRV-107    | PowerBI Executive Dashboard    | 2026-11-04 | Resolved    
+INQ-507    | Rohan Gupta        | Program PRG-203    | Cyber Security Internship In   | 2026-11-04 | Closed      
+INQ-508    | Neha Joshi         | Program PRG-208    | Design Bootcamp Group Discou   | 2026-11-04 | In Progress 
+INQ-509    | Deepak Singh       | Service SRV-109    | POS REST API Integration       | 2026-11-05 | New         
+INQ-510    | Ananya Roy         | Program PRG-210    | Frontend Internship Prerequi   | 2026-11-05 | Resolved    
+INQ-511    | Rajesh Sharma      | Program PRG-211    | Corporate Apprenticeship Spo   | 2026-11-05 | New         
+=========================================================================================================
+Total: 11 record(s)
+
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 2
+
+--- Log New Customer Inquiry ---
+Enter Inquiry ID (e.g. INQ-511): INQ-512
+Enter Existing Customer ID (e.g. CUST-401): CUST-411
+Link to Service or Program? (Service/Program): Service
+Enter Linked Service/Program ID (e.g. SRV-101 or PRG-201): SRV-112
+Enter Subject: Cloud Security Audit Proposal
+Enter Inquiry Message: Requesting quote and scope of work for infrastructure audit.
+Enter Date (YYYY-MM-DD) [Press Enter for today]: 2026-11-07
+Enter Status (New/In Progress/Resolved/Closed) [Default: New]: New
+
+Success: Inquiry 'INQ-512' logged for customer 'Sunita Deshmukh'.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 3
+
+Enter Inquiry ID to update: INQ-512
+Enter New Status (New/In Progress/Resolved/Closed): In Progress
+
+Success: Inquiry 'INQ-512' status updated to 'In Progress'.
+
+=============================================
+   CUSTOMER & INQUIRY MANAGEMENT MENU
+=============================================
+1. View All Inquiries
+2. Log New Inquiry
+3. Update Inquiry Status
+4. View All Customers
+5. Add New Customer
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 6
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 4
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 1
+
+Enter search keyword: UnmatchedQueryXYZ123
+
+No matching records found across services, programs, or inquiries for 'UnmatchedQueryXYZ123'.
+
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 2
+Enter service keyword (optional, press Enter to skip): Security
+Enter category (optional, press Enter to skip): 
+Enter status (optional, press Enter to skip): Active
+
+Showing 2 matching service(s):
+-------------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+-------------------------------------------------------------------------------------
+SRV-106    | Cyber Security Audit           | Security             | 2800.00    | Active    
+SRV-112    | Enterprise Cloud Security Co   | Cloud Solutions      | 3400.00    | Active    
+-------------------------------------------------------------------------------------
+Total: 2 record(s)
+
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 1
+
+Enter search keyword: Security
+
+--- Universal Search Results for 'Security' (Total Matches: 6) ---
+
+Matching Services (2):
+-------------------------------------------------------------------------------------
+ID         | Service Name                   | Category             | Price ($)  | Status    
+-------------------------------------------------------------------------------------
+SRV-106    | Cyber Security Audit           | Security             | 2800.00    | Active    
+SRV-112    | Enterprise Cloud Security Co   | Cloud Solutions      | 3400.00    | Active    
+-------------------------------------------------------------------------------------
+Total: 2 record(s)
+
+Matching Programs (1):
+--------------------------------------------------------------------------------------------
+ID         | Program Title                      | Type           | Duration   | Seats  | Status    
+--------------------------------------------------------------------------------------------
+PRG-203    | Cyber Security Analyst Internshi   | Internship     | 10 weeks   | 20     | Open      
+--------------------------------------------------------------------------------------------
+Total: 1 record(s)
+
+Matching Inquiries (3):
+=========================================================================================================
+ID         | Customer           | Linked             | Subject                        | Date       | Status      
+---------------------------------------------------------------------------------------------------------
+INQ-505    | Arun Kumar         | Service SRV-106    | Annual Cyber Security Audit    | 2026-11-03 | In Progress 
+INQ-507    | Rohan Gupta        | Program PRG-203    | Cyber Security Internship In   | 2026-11-04 | Closed      
+INQ-512    | Sunita Deshmukh    | Service SRV-112    | Cloud Security Audit Proposa   | 2026-11-07 | In Progress 
+=========================================================================================================
+Total: 3 record(s)
+
+
+=============================================
+        SEARCH & FILTER MENU
+=============================================
+1. Universal Search (Across Everything)
+2. Search & Filter Services
+3. Search & Filter Programs
+4. Search & Filter Inquiries
+5. Back to Main Menu
+=============================================
+Enter choice (1-5): 5
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 5
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 1
+========================================================================
+        VEDA TECHNOLOGY - EXECUTIVE BUSINESS SUMMARY REPORT
+========================================================================
+Report Generated: 2026-11-07 18:16:45
+Data Source: Synthetic Operational Records
+------------------------------------------------------------------------
+
+[1] Executive Summary & Overall Totals:
+--------------------------------------------------
+Total Technology Services Offered:  12
+Total Training/Tech Programs:      12
+Total Registered Business Clients: 11
+Total Customer Inquiries Logged:   12
+Total Program Seats Capacity:      290 (Open: 190)
+Inquiry Resolution Efficiency:     33.3%
+
+[2] Services Breakdown by Category:
+--------------------------------------------------
+Category                         | Total Services 
+--------------------------------------------------
+Cloud Solutions                  | 2              
+Data Services                    | 1              
+Design Services                  | 1              
+Emerging Tech                    | 2              
+Enterprise Solutions             | 1              
+Infrastructure                   | 1              
+Mobile Development               | 1              
+Security                         | 1              
+Software Development             | 2              
+Total Services: 12
+
+[3] Programs Breakdown by Type & Seats Capacity:
+--------------------------------------------------
+Program Type                     | Programs Count 
+--------------------------------------------------
+Internship                       | 5              
+Technology                       | 3              
+Training                         | 4              
+--------------------------------------------------
+Total Programs Offered: 12
+Total Seats Capacity:   290
+  - Seats in Open Programs:    190
+  - Seats in Ongoing Programs: 30
+  - Seats in Closed Programs:  70
+
+[4] Inquiries Status & Resolution Analysis:
+--------------------------------------------------
+Status                    | Count     
+--------------------------------------------------
+New                       | 3         
+In Progress               | 5         
+Resolved                  | 3         
+Closed                    | 1         
+--------------------------------------------------
+Total Inquiries Logged:  12
+Active / Open Inquiries: 8 (66.7%)
+Resolved / Closed:       4 (33.3%)
+========================================================================
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 2
+
+--- Services Breakdown by Category ---
+Category                         | Count     
+---------------------------------------------
+Cloud Solutions                  | 2         
+Data Services                    | 1         
+Design Services                  | 1         
+Emerging Tech                    | 2         
+Enterprise Solutions             | 1         
+Infrastructure                   | 1         
+Mobile Development               | 1         
+Security                         | 1         
+Software Development             | 2         
+Total Services: 12
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 3
+
+--- Programs by Type & Capacity ---
+Internship          : 5 program(s)
+Technology          : 3 program(s)
+Training            : 4 program(s)
+Total Available Seats Across Programs: 290
+  - Seats in Open Programs:    190
+  - Seats in Ongoing Programs: 30
+  - Seats in Closed Programs:  70
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 4
+
+--- Inquiries Status & Resolution ---
+New                 : 3
+In Progress         : 5
+Resolved            : 3
+Closed              : 1
+Total Inquiries:   12
+Active / Open:     8 (66.7%)
+Resolved / Closed:  4 (33.3%)
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 5
+
+Success: Full business summary report saved successfully to:
+  C:\Users\realc\.gemini\antigravity\scratch\day-35-veda-business-service-management-system\output\business_summary_report.txt
+
+
+=============================================
+        BUSINESS REPORTS MENU
+=============================================
+1. Full Business Summary & Operations Report
+2. Services Breakdown by Category
+3. Programs Breakdown by Type & Total Seats
+4. Inquiries Status & Resolution Metrics
+5. Save Full Business Summary Report to File
+6. Back to Main Menu
+=============================================
+Enter choice (1-6): 6
+=======================================================
+  VEDA TECHNOLOGY - BUSINESS & SERVICE MANAGEMENT
+  Day 4: Production Foundation & System Finalization
+=======================================================
+1. Service Management
+2. Program Management
+3. Customer & Inquiry Management
+4. Search & Filter Records
+5. Business Reports
+6. Exit
+=======================================================
+Enter choice (1-6): 6
+
+Thank you for using Veda Technology Service Management System. Goodbye!
